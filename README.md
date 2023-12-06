@@ -52,4 +52,4 @@ FR11. The app shall provide the user with emergency contact
 RELEVANT QUALITY ATTRIBUTES FOR THE MINPHR APP
 Software Product Quality: Security, Usability, Reliability, Scalability, Privacy, Availability,  Compatibility and Interoperability.
 Quality in Use: Effectiveness, Trust and Safety.
-ad
+

@@ -9,29 +9,16 @@ public enum UserState {
 
 public class User {
     private UserState state;
-    private List<LoginUser> loginUsers; // 0-to-many relationship with LoginUser
-    private List<OfflineUser> offlineUsers; // 0-to-many relationship with OfflineUser
-
-    // Method to add a LoginUser
-    public void addLoginUser(LoginUser loginUser) {
-        if (this.loginUsers == null) {
-            this.loginUsers = new ArrayList<>();
-        }
-        this.loginUsers.add(loginUser);
-    }
-
-    // Method to add an OfflineUser
-    public void addOfflineUser(OfflineUser offlineUser) {
-        if (this.offlineUsers == null) {
-            this.offlineUsers = new ArrayList<>();
-        }
-        this.offlineUsers.add(offlineUser);
-    }
+    
 }
 
 
 public class OfflineUser extends User {
-
+    private Set<LoginUser> accessibleLoginUsers; // Access to LoginUsers' HealthData
+    public OfflineUser() {
+        this.accessibleLoginUsers = new HashSet<>();
+    }
+    
 }
 
 public class LoginUser extends User {
@@ -39,6 +26,11 @@ public class LoginUser extends User {
     private int phoneNum;
     private Address address;
     private String email;
+
+    private List<HealthData> healthData; // List of HealthData
+    public LoginUser() {
+        this.healthData = new ArrayList<>();
+    }
     
 }
 

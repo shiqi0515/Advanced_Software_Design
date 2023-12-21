@@ -12,26 +12,6 @@ public class User {
     private List<LoginUser> loginUsers; // 0-to-many relationship with LoginUser
     private List<OfflineUser> offlineUsers; // 0-to-many relationship with OfflineUser
 
-    // Getter for loginUsers
-    public List<LoginUser> getLoginUsers() {
-        return loginUsers;
-    }
-
-    // Setter for loginUsers
-    public void setLoginUsers(List<LoginUser> loginUsers) {
-        this.loginUsers = loginUsers;
-    }
-
-    // Getter for offlineUsers
-    public List<OfflineUser> getOfflineUsers() {
-        return offlineUsers;
-    }
-
-    // Setter for offlineUsers
-    public void setOfflineUsers(List<OfflineUser> offlineUsers) {
-        this.offlineUsers = offlineUsers;
-    }
-
     // Method to add a LoginUser
     public void addLoginUser(LoginUser loginUser) {
         if (this.loginUsers == null) {

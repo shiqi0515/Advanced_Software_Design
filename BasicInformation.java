@@ -3,11 +3,17 @@ public class BasicInformation {
     private Integer age;
     private String gender;
 
+    public BasicInformation(int userID, Integer age, String gender) {
+        this.userID = userID;
+        this.age = age;
+        this.gender = gender;
+    }
+
     public int getUserID() {
         return userID;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
@@ -15,3 +21,4 @@ public class BasicInformation {
         return gender;
     }
 }
+
